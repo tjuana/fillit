@@ -6,7 +6,7 @@
 /*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 12:58:53 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/10 15:25:36 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/11 13:08:29 by tjuana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,7 +48,7 @@ static int	add_to_map(t_game *gam, t_piece *pic)
 	int let_go;
 
 	k = 0;
-	let_go = 0;
+	let_go = 1; ///???
 	if (gam->map[pic->y][pic->x] != TEMPTY && pic->map[0][0] != TEMPTY)
 		return (0);
 	while (let_go && k < pic->hight)
@@ -56,8 +56,7 @@ static int	add_to_map(t_game *gam, t_piece *pic)
 		i = 0;
 		while (let_go && i < pic->width)
 		{
-			if (gam->map[pic->y + k][pic->x + i] != TEMPTY &&\
-					pic->map[i][k] != TEMPTY)
+			if (gam->map[pic->y + k][pic->x + i] != TEMPTY && pic->map[k][i] != TEMPTY)
 				let_go = 0;
 			else if (gam->map[pic->y + k][pic->x + i] == TEMPTY)
 				gam->map[pic->y + k][pic->x + i] = pic->map[k][i];
