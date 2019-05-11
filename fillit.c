@@ -6,7 +6,7 @@
 /*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 19:09:46 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/10 15:37:53 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/11 17:00:23 by tjuana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 static void		free_map(t_game *game)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	if (game->map)
@@ -45,6 +45,7 @@ void			put_the_map(t_game *game)
 		k++;
 	}
 }
+
 int				main(int c, char **v)
 {
 	t_game game;

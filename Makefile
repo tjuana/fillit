@@ -6,7 +6,7 @@
 #    By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/10 13:19:12 by tjuana            #+#    #+#              #
-#    Updated: 2019/05/10 15:16:44 by tjuana           ###   ########.fr        #
+#    Updated: 2019/05/11 17:03:47 by tjuana           ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -21,21 +21,21 @@ OBJECTS = $(subst .c,.o,$(subst /,,$(SRCS)))
 all : $(NAME)
 
 $(NAME) : lib $(OBJECTS)
-	$(CCFLAGS) -o $(NAME) $(OBJECTS) -L libft -lft
+	@$(CCFLAGS) -o $(NAME) $(OBJECTS) -L libft -lft
 
 $(OBJECTS) :
-	$(CCFLAGS) -c $(SRCS) -Iincludes/ -Ilibft/includes/
+	@$(CCFLAGS) -c $(SRCS) -Iincludes/ -Ilibft/includes/
 
 lib:
-	make -C libft
+	@make -C libft
 
 clean:
 	@rm -rf $(OBJECTS)
-	make -C libft clean
+	@make -C libft clean
 
 fclean: clean
 	@rm -rf $(NAME)
-	make -C libft fclean
+	@make -C libft fclean
 
 re: fclean all
 

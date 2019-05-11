@@ -6,7 +6,7 @@
 /*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 15:53:38 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/11 13:11:25 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/11 17:19:48 by tjuana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,7 +60,8 @@ static t_piece		*init_piece(char *buff)
 	i = 0;
 	while (i < newp->hight)
 	{
-		newp->map[i] = buff_piece(buff, ((pts.t + i) * 5 + pts.l), newp->width, newp->letter);
+		newp->map[i] = buff_piece(buff, ((pts.t + i) * 5 + pts.l), \
+				newp->width, newp->letter);
 		i++;
 	}
 	return (newp);
@@ -81,8 +82,10 @@ void				piece_to_back(t_game *game, t_piece *piece)
 		list = list->next;
 	list->next = piece;
 	game->nb_pieces++;
-
+	if (game->nb_pieces > 26)
+		print_error(2);
 }
+
 void				store(t_game *game, char *buff)
 {
 	t_piece *next;

@@ -6,7 +6,7 @@
 /*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 14:23:29 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/10 15:23:39 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/11 16:57:07 by tjuana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,9 +39,9 @@ typedef struct	s_piece
 	char			**map;
 	char			letter;
 	struct s_piece	*next;
-}					t_piece;
+}				t_piece;
 
-typedef struct s_game
+typedef struct	s_game
 {
 	t_piece		*pieces;
 	int			nb_pieces;
@@ -52,8 +52,8 @@ typedef struct s_game
 int				check_file(t_game *game, char *file);
 void			print_error(int c);
 void			store(t_game *game, char *buff);
-char			*buff_piece(const char *s, unsigned int start, size_t len,\
-							 char l);
+char			*buff_piece(const char *s, unsigned int start, size_t len, \
+							char l);
 int				game_in(t_game *game, char *file);
 void			piece_to_back(t_game *game, t_piece *piece);
 void			put_the_map(t_game *game);

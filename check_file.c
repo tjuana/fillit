@@ -6,7 +6,7 @@
 /*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 14:21:31 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/10 15:23:14 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/11 17:17:46 by tjuana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ static int		is_val_char(int c, int i)
 		return (1);
 	return (0);
 }
+
 /*
 ** check da neighboorhood to know if its a valid tetriminos BRO'
 */

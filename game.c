@@ -6,13 +6,14 @@
 /*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 18:33:19 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/11 13:06:01 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/11 16:58:06 by tjuana           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
-char			*buff_piece(const char *s, unsigned int start, size_t len, char l)
+char			*buff_piece(const char *s, unsigned int start, \
+							size_t len, char l)
 {
 	char			*res;
 	unsigned int	ind;
