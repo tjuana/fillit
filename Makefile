@@ -6,15 +6,15 @@
 #    By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/05/10 13:19:12 by tjuana            #+#    #+#              #
-#    Updated: 2019/05/11 17:03:47 by tjuana           ###   ########.fr        #
+#    Updated: 2019/05/15 15:38:39 by ccriston         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME		= fillit
+NAME	= fillit
 
 CCFLAGS	= gcc -Wall -Wextra -Werror
 
-SRCS		= check_file.c error.c fillit.c game.c store_block.c solution.c
+SRCS	= check_file.c error.c fillit.c game.c store_block.c solution.c
 
 OBJECTS = $(subst .c,.o,$(subst /,,$(SRCS)))
 
@@ -39,4 +39,4 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: clean fclean all re
+.PHONY: clean fclean all re lib

@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   check_file.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccriston <ccriston@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 14:21:31 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/11 17:17:46 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/15 15:38:46 by ccriston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "fillit.h"
 
 /*
-** check da fucking CHAR if its a GOOD ONE or NOT! BROW
+** check da CHAR if its a GOOD ONE or NOT! BROW
 */
 
 static int		is_val_char(int c, int i)

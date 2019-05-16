@@ -6,7 +6,7 @@
 /*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 15:53:38 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/11 17:19:48 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/15 15:39:18 by ccriston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,11 +47,12 @@ static t_piece		*init_piece(char *buff)
 	int			i;
 	static char	c = 'A';
 
-	if (!(newp = ft_memalloc(sizeof(t_piece))))
+	if (!(newp = (t_piece *)ft_memalloc(sizeof(t_piece))))
 		print_error(2);
 	newp->x = 0;
 	newp->y = 0;
 	newp->letter = c++;
+	newp->next = NULL;
 	pts = get_coordinate(buff);
 	newp->width = pts.r - pts.l + 1;
 	newp->hight = pts.b - pts.t + 1;

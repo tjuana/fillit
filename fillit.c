@@ -6,7 +6,7 @@
 /*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/07 19:09:46 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/11 17:00:23 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/15 15:38:57 by ccriston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,16 +14,27 @@
 
 static void		free_map(t_game *game)
 {
-	int	i;
+	int		i;
+	t_piece	*arr;
 
 	i = 0;
 	if (game->map)
 	{
 		while (i < 4 * game->nb_pieces)
-			free(game->map[i++]);
-		free(game->map);
-		game->map = NULL;
+			ft_memdel((void **)&(game->map[i++]));
+		ft_memdel((void **)&(game->map));
 	}
+	while (!(game->pieces == NULL))
+	{
+		i = 0;
+		arr = game->pieces->next;
+		while (i < game->pieces->hight)
+			ft_memdel((void **)&(game->pieces->map[i++]));
+		ft_memdel((void **)&(game->pieces->map));
+		ft_memdel((void **)&(game->pieces));
+		game->pieces = arr;
+	}
+	ft_memdel((void **)&(game->pieces));
 }
 
 /*

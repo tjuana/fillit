@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   solution.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: tjuana <tjuana@student.42.fr>              +#+  +:+       +#+        */
+/*   By: ccriston <ccriston@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/05/10 12:58:53 by tjuana            #+#    #+#             */
-/*   Updated: 2019/05/11 16:54:32 by tjuana           ###   ########.fr       */
+/*   Updated: 2019/05/15 15:39:14 by ccriston         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -69,6 +69,10 @@ static int	add_to_map(t_game *gam, t_piece *pic)
 		return (1);
 	return (revert_map(gam, pic, i, k));
 }
+
+/*
+** check is this the answer
+*/
 
 static int	answer(t_game *game, t_piece *pic)
 {
